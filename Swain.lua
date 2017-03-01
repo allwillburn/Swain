@@ -129,7 +129,9 @@ OnTick(function (myHero)
 			 CastTargetSpell(target, Cutlass)
             end
 
-            
+            if SwainMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 900) then
+			CastTargetSpell(target, _W)
+	    end
 
             if SwainMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 700) then
 		     if target ~= nil then 
@@ -149,9 +151,7 @@ OnTick(function (myHero)
 			CastSpell(RHydra)
             end
 
-	    if SwainMenu.Combo.W:Value() and Ready(_W) and ValidTarget(target, 900) then
-			CastTargetSpell(target, _W)
-	    end
+	   
 
             
 	    if SwainMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 700) then
